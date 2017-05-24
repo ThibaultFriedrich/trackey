@@ -1,0 +1,9 @@
+.transition (@properties, @delay, @i:1) when (@i <= length(@properties)) {
+
+    @property: extract(@properties, @i);
+    -webkit-transition+: @property @delay;
+    -o-transition+: @property @delay;
+    -moz-transition+: @property @delay;
+    transition+: @property @delay;
+    .transition(@properties, @delay, @i + 1);
+}
