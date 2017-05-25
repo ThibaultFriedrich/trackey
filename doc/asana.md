@@ -1,9 +1,7 @@
 # asana
 
 
-* https://asana.com/guide/help/api/api
-* https://github.com/Asana/node-asana
-* https://asana.com/developers/api-reference/tasks
+## Get started
 
 ```javascript
 var asana = require('asana');
@@ -13,3 +11,9 @@ client.users.me().then(function(me) {
 });
 
 ```
+
+## Links
+
+* https://asana.com/guide/help/api/api
+* https://github.com/Asana/node-asana
+* https://asana.com/developers/api-reference/tasks

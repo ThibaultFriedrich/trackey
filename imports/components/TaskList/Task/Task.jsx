@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 // import styles from './task.style'
 
-import { Tasks } from '../../api/tasks.js'
+import { Tasks } from '../../../api/tasks.js'
 
 // Task component - represents a single todo item
 export default class Task extends Component {
