@@ -1,0 +1,30 @@
+.task {
+  &-list {
+    max-width: $maxWidth;
+    margin: auto;
+    padding: 20px 0px;
+  }
+
+
+  &-play {
+    $height: 40px;
+    height: $height;
+    width: $height;
+    border-radius: 999em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $background;
+    background: $foreground;
+    cursor: pointer;
+    font-size: 1.2em;
+
+    @include transition(all $defaultDuration $defaultFunction);
+
+    &:hover {
+      font-size: 1.6em;
+    }
+
+    
+  }
+}

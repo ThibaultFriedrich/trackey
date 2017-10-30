@@ -1,0 +1,26 @@
+$maxWidth: 800px;
+
+$breakpoints: (
+  "small" : (320px, 480px),
+  "medium": (768px, 1024px),
+  "large" : (1224px, 1824px)
+);
+
+@mixin viewport($size, $base: up) {
+  $range: map-get($breakpoints, $size);
+  @if $range != null {
+    @if $base == up {
+      @media only screen and (min-width: nth($range, 1)) {
+        @content;
+      }
+    }
+    @else if $base == only {
+      @media only screen and (min-width: nth($range, 1)) and (max-width: nth($range, 2)) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @warn "No suitable media query value for '#{$size}'.";
+  }
+}

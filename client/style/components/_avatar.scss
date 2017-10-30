@@ -1,0 +1,18 @@
+.avatar {
+  $height: 40px;
+
+  height: $height;
+  width: $height;
+
+  background: $background_hue1;
+  border-radius: 999em;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @include fontLight;
+  font-weight: 600;
+
+  margin-left: 15px;
+}

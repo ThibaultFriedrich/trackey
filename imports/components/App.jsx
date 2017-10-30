@@ -1,14 +1,17 @@
 import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 
-import TaskList from './TaskList'
-import Search from './Search'
+import Journal from './Journal'
+import ConnectAccount from './ConnectAccount'
 
 export const app = () => {
   return (
-    <Router history={browserHistory}>
-      <Route path="/" component={Search} />
-      <Route path="/list" component={TaskList} />
-    </Router>
+    <div className="container">
+      {/* <Nav /> */}
+      <Router history={browserHistory}>
+        <Route path="/" component={Journal} />
+        <Route path="/account/connect" component={ConnectAccount} />
+      </Router>
+    </div>
   )
 }

@@ -1,0 +1,108 @@
+.journal {
+  height: 100%;
+  padding-top: 90px;
+  padding-bottom: 60px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;*/
+
+
+
+  &-inner {
+    width: $maxWidth;
+    margin: auto;
+    position: relative;
+
+    @include transition(all 0.5s ease-in-out);
+
+    top: 0%;
+
+    &-center {
+      top: 45%;
+    }
+  }
+
+
+  &-new-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-current-datetime {
+      @include fontLight;
+      text-align: center;
+      color: $foreground;
+
+      &-date {
+
+      }
+
+      &-time {
+        font-size: 5.4em;
+        line-height: 1em;
+
+        &-large {
+          font-size: 4.2em;
+        }
+      }
+    }
+
+    &-name {
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+
+      &, &:focus {
+        border: none;
+        color: $foreground;
+        outline: none;
+        font-size: 1.5em;
+        text-align: center;
+        @include fontLight;
+      }
+
+      $placeholderColor: darken($border, 5%);
+
+      &::-webkit-input-placeholder {
+        color: $placeholderColor;
+        @include fontLight;
+      }
+
+      &:-moz-placeholder {
+        color: $placeholderColor;
+        @include fontLight;
+      }
+
+      &::-moz-placeholder {
+        color: $placeholderColor;
+        @include fontLight;
+      }
+
+      &:-ms-input-placeholder {
+        color: $placeholderColor;
+        @include fontLight;
+      }
+
+      &::-ms-input-placeholder {
+        color: $placeholderColor;
+        @include fontLight;
+      }
+    }
+
+
+    &-choose {
+      // border: 1px solid $border;
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@import "search";
+@import "current-task";

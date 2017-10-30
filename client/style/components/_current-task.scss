@@ -1,0 +1,183 @@
+.journal {
+  &-current-task {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-inner {
+      width: 100%;
+      &-center {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+      }
+    }
+
+
+
+    &-chrono {
+      position: relative;
+      z-index: 10;
+      border: 4px solid $foreground;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+
+      overflow: hidden;
+
+      $height: 250px;
+      height: $height;
+      width: $height;
+      margin: auto;
+      user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+      -moz-user-select: none;
+
+      /*@include viewport(small) {
+        $height: 700px;
+        height: $height;
+        width: $height;
+        font-size: 3em;
+      }*/
+
+      color: $foreground;
+
+      border-radius: 999em;
+
+      &-time {
+        @include fontBold;
+        font-size: 3em;
+      }
+
+      &-description {
+        @include fontLight;
+        color: $foreground;
+        text-align: center;
+        font-size: 1.1em;
+      }
+
+      &-play {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.8);
+        color: $foreground;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+
+        z-index: 20;
+        opacity: 0;
+
+        cursor: pointer;
+
+        @include transition(all 0.4s $defaultFunction);
+      }
+
+      &:hover &-play {
+        opacity: 1;
+      }
+    }
+
+    &-remote {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 30px;
+
+      @include viewport(small, only) {
+        width: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+      }
+
+      &-left, &-right {
+        flex: 0 0 40%;
+        // text-transform: uppercase;
+        color: $foreground;
+        @include fontBold;
+        position: relative;
+        // visibility: hidden;
+        //
+
+      }
+
+      &-button {
+        opacity: 1;
+        position: relative;
+        left: 0px;
+        right: 0px;
+
+        &-left, &-right {
+          &-hide {
+            opacity: 0;
+          }
+        }
+
+        &-left-hide {
+          left: 30px;
+        }
+
+        &-right-hide {
+          left: -30px;
+        }
+      }
+
+      &-play {
+        display: inline-block;
+        $height: 50px;
+        height: $height;
+        width: $height;
+        margin: auto;
+        border-radius: 999em;
+        background: $foreground;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+
+        &-icon {
+          color: $background;
+
+          @include transition(all $defaultDuration $defaultFunction);
+        }
+
+        &:hover &-icon {
+          font-size: 1.5em;
+        }
+      }
+
+      &-center {
+        flex: 0 0 20%;
+        text-align: center;
+      }
+
+      &-left {
+        text-align: left;
+      }
+
+      &-right {
+        text-align: right;
+      }
+
+    }
+  }
+}

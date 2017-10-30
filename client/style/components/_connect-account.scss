@@ -1,0 +1,71 @@
+.connect-account {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include fontLight;
+
+  &-inner {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  &-title {
+    @include fontBold;
+    font-size: 1.3em;
+    text-align: center;
+    color: $foreground;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-description {
+    @include fontBold;
+    font-size: 0.95em;
+    text-align: center;
+    color: $foreground_hue2;
+    margin: 10px 0px;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  &-service {
+    flex: 0 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+      background: $background_hue1;
+    }
+
+    &-icon {
+      $height: 40px;
+      flex: 0 0 $height;
+      width: $height;
+    }
+
+    &-name {
+      flex: 1 1 auto;
+      @include fontBold;
+      padding-top: 5px;
+      // padding-left: 20px;
+      color: $foreground_hue2;
+    }
+  }
+
+}
