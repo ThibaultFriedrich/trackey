@@ -1,0 +1,42 @@
+.history {
+  @include container;
+
+  &-inner {
+    width: $maxWidth;
+    margin: auto;
+  }
+
+  &-list {
+
+  }
+
+  &-task {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid $border;
+    border-radius: 3px;
+    margin-top: 15px;
+    padding: 10px;
+
+    &-service {
+      flex: 0 0 auto;
+      $height: 50px;
+      height: $height;
+      width: $height;
+      margin-right: 10px;
+    }
+
+    &-content {
+      flex: 1 1 auto;
+      @include fontLight;
+      color: $foreground;
+
+      &-indicators {
+        @include fontBold;
+        color: $foreground_hue2;
+        font-size: 0.7em;
+      }
+    }
+  }
+}

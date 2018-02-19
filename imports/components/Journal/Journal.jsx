@@ -84,7 +84,7 @@ class Journal extends Component {
         chrono: 0,
         running: true,
         activeTask: {
-          description: task.title,
+          title: task.title,
           timeline: [],
           currentTimeline: {
             startAt: new Date(),
@@ -141,7 +141,7 @@ class Journal extends Component {
                     {minutes}:{seconds}
                   </div>
                   <div className="journal-current-task-chrono-description">
-                    {this.state.activeTask.description}
+                    {this.state.activeTask.title}
                   </div>
                   {/* <div className="journal-current-task-chrono-play">
                     <i className="ti-control-pause" />

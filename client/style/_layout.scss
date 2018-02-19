@@ -24,3 +24,13 @@ $breakpoints: (
     @warn "No suitable media query value for '#{$size}'.";
   }
 }
+
+@mixin container {
+  height: 100%;
+  padding-top: 90px;
+  padding-bottom: 60px;
+
+  box-sizing: border-box;
+
+  position: relative;
+}

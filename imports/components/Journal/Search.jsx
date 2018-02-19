@@ -13,8 +13,14 @@ class Search extends Component {
       firstTime: true,
       tasks: [],
       hiding: false,
-      top: 0,
+      top: -200,
     }
+
+    setTimeout(() => {
+      this.setState({
+        top: 0,
+      })
+    }, 100)
   }
 
   onChange(event) {
@@ -113,7 +119,7 @@ class Search extends Component {
 
   render() {
     return (
-      <div className={`journal-inner ${this.state.firstTime ? 'journal-inner-center' : ''}`}>
+      <div className="journal-inner ${this.state.firstTime" >
         <div
           className="journal-search-container"
           style={{ top: this.state.top }}

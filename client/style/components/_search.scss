@@ -9,7 +9,7 @@
     top: 0px;
     z-index: 10;
 
-    @include transition(all $defaultDuration $defaultFunction);
+    @include transition(all 0.25s $defaultFunction);
 
     &.hiding {
       top: -2000px;
@@ -18,7 +18,7 @@
 
 
 
-  $placeholderColor: darken($border, 5%);
+  $placeholderColor: darken($border, 13%);
 
   &-icon {
     font-size: 1.2em;
